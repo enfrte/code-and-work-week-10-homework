@@ -1,0 +1,4 @@
+@BASE_URL = http://localhost:5000/api/user
+
+### users (search for users)
+GET {{BASE_URL}}/search
