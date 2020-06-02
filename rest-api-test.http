@@ -1,0 +1,10 @@
+@BASE_URL = http://localhost:5001
+
+### users (search for users)
+POST {{BASE_URL}}/send
+Content-Type: application/json
+
+{
+  "name": "Noel",
+  "id": 2
+}

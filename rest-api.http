@@ -1,4 +1,7 @@
 @BASE_URL = http://localhost:5000/api/user
 
+### express test - no api route
+GET http://localhost:5000/
+
 ### users (search for users)
 GET {{BASE_URL}}/search
