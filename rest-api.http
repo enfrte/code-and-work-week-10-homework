@@ -1,6 +1,6 @@
 @BASE_URL = http://localhost:5000/api
 
-### express test - no api route
+### Test if express is working
 GET http://localhost:5000/
 
 ### student/ Get all students
@@ -13,13 +13,13 @@ GET {{BASE_URL}}/student/1591111934265
 POST {{BASE_URL}}/student
 Content-Type: application/json
 
-{ "firstname": "Leon Post", "lastname": "Ford", "dob": "2001-01-01", "email": "leon@example.com" }
+{ "firstname": "Noel", "lastname": "Ford", "dob": "2001-01-01", "email": "leon@example.com" }
 
 ### student/:id Delete a student
-DELETE {{BASE_URL}}/student/1591111934265
+DELETE {{BASE_URL}}/student/1591126826350
 
 ### student/:id Update a student
-PATCH {{BASE_URL}}/student/1591111934265
+PATCH {{BASE_URL}}/student/1591126826350
 Content-Type: application/json
 
-{ "id": 1591111934265, "name": "Leon Patch", "email": "leon@example.com" }
+{ "firstname": "Leon" }
