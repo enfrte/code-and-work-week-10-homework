@@ -13,12 +13,12 @@ app.use(express.json());
 
 async function connectMongoose() {
 	await mongoose.connect(
-			"mongodb://localhost:27017/studentDB",
-			{ useNewUrlParser: true, useUnifiedTopology: true }
+		"mongodb://localhost:27017/studentDB",
+		{ useNewUrlParser: true, useUnifiedTopology: true }
 	);
 
 	app.use('/api/user/', userRouter);
-	
+
 	//await remove(TestModel, {name: "Rene 3"});
 	//await createNew(TestModel, {name: "Rene 3", surname: "slightly 3"});
 	//await createNew(TestModel, {name: "Rene 4", surname: "slightly 4"});
@@ -30,5 +30,9 @@ async function connectMongoose() {
 }
 
 connectMongoose();
+
+app.get('/', (req, res) => {
+	res.send("Express is working");
+});
 
 app.listen(port, () => console.log(`Server is running on ${port}`));
