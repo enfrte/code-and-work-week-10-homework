@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const userRouter = require("./api/user.router").router;
+const studentRouter = require("./api/student.router").router;
 
 require('dotenv').config();
 
@@ -18,7 +18,7 @@ const requestLogger = (req, res, next) => {
 app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
-app.use('/api/user/', userRouter);
+app.use('/api', studentRouter);
 app.get('/', (req, res) => {
 	res.send("Express is working");
 });
@@ -30,7 +30,7 @@ async function connectMongoose() {
 		{ useNewUrlParser: true, useUnifiedTopology: true }
 	);
 
-	app.use('/api/user/', userRouter);
+	app.use('/api/student/', studentRouter);
 }
 connectMongoose();
 */
