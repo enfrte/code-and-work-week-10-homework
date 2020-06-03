@@ -7,19 +7,19 @@ GET http://localhost:5000/
 GET {{BASE_URL}}/student
 
 ### student/:id Get one student
-GET {{BASE_URL}}/student/1591111934265
+GET {{BASE_URL}}/student/1591168565733
 
 ### Create a new student
 POST {{BASE_URL}}/student
 Content-Type: application/json
 
-{ "firstname": "Noel", "lastname": "Ford", "dob": "2001-01-01", "email": "leon@example.com" }
+{ "firstname": "Noel", "lastname": "New", "dob": "2002-02-02", "email": "noel@example.com" }
 
 ### student/:id Delete a student
-DELETE {{BASE_URL}}/student/1591126826350
+DELETE {{BASE_URL}}/student/1591168565733
 
 ### student/:id Update a student
-PATCH {{BASE_URL}}/student/1591126826350
+PATCH {{BASE_URL}}/student/1591168565733
 Content-Type: application/json
 
 { "firstname": "Leon" }

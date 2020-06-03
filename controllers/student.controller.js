@@ -5,9 +5,7 @@ const Student = require('../models/student.model');
 
 function search(req, res) {
 	Student.find()
-		.then(dbData => {
-			res.json(dbData)
-		})
+		.then(dbData => res.json(dbData))
 		.catch(err => res.status(400).json(err));
 }
 
